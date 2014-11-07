@@ -127,7 +127,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QlS-1g-aNn">
                                 <rect key="frame" x="150" y="148" width="300" height="40"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FMDB" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5B-93-cMI">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="SQLite" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5B-93-cMI">
                                         <rect key="frame" x="0.0" y="11" width="99" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="99" id="PNs-FN-v3p"/>
@@ -147,7 +147,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="loadFmdb:" destination="W27-J7-8ds" eventType="touchUpInside" id="JNN-1A-szW"/>
+                                            <action selector="loadSqlite:" destination="W27-J7-8ds" eventType="touchUpInside" id="W51-0i-IHr"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hCb-SK-jB7">
@@ -160,7 +160,7 @@
                                             <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
                                         <connections>
-                                            <action selector="saveFmdb:" destination="W27-J7-8ds" eventType="touchUpInside" id="sfK-IS-3j7"/>
+                                            <action selector="saveSqlite:" destination="W27-J7-8ds" eventType="touchUpInside" id="2kf-Ma-HBJ"/>
                                         </connections>
                                     </button>
                                 </subviews>

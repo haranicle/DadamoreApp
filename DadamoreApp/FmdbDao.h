@@ -11,9 +11,9 @@
 
 @interface FmdbDao : NSObject
 
-@property FMDatabase* db;
+@property FMDatabase *db;
 
 - (void)insertRecordToNumsTable:(NSInteger)num;
-- (NSString*)selectFromNumsTable;
+- (NSString *)selectFromNumsTable;
 
 @end

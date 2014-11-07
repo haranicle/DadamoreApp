@@ -10,12 +10,13 @@
 
 @implementation FmdbDao
 
-static NSString* kDbFileName = @"dadamore.db";
+static NSString *kDbFileName = @"dadamore_fmdb.db";
 
 - (instancetype)init
 {
     self = [super init];
-    if (self) {
+    if (self)
+    {
         [self createDb];
         [self createTables];
     }
@@ -24,8 +25,8 @@ static NSString* kDbFileName = @"dadamore.db";
 
 - (void)createDb
 {
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-    NSString* dir = [paths objectAtIndex:0];
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *dir = [paths objectAtIndex:0];
 
     // create db file
     self.db = [FMDatabase databaseWithPath:[dir stringByAppendingPathComponent:kDbFileName]];
@@ -33,12 +34,13 @@ static NSString* kDbFileName = @"dadamore.db";
 
 - (void)createTables
 {
-    if (!_db) {
+    if (!_db)
+    {
         NSLog(@"db not found!! | %s", __func__);
         return;
     }
 
-    NSString* sql = @"CREATE TABLE IF NOT EXISTS nums (id INTEGER PRIMARY KEY AUTOINCREMENT, num REAL);";
+    NSString *sql = @"CREATE TABLE IF NOT EXISTS nums (id INTEGER PRIMARY KEY AUTOINCREMENT, num REAL);";
     [_db open];
     [_db executeUpdate:sql];
     [_db close];
@@ -46,26 +48,28 @@ static NSString* kDbFileName = @"dadamore.db";
 
 - (void)insertRecordToNumsTable:(NSInteger)num
 {
-    if (!_db) {
+    if (!_db)
+    {
         NSLog(@"db not found!! | %s", __func__);
         return;
     }
 
-    NSString* sql = @"INSERT INTO nums (num) VALUES (?)";
+    NSString *sql = @"INSERT INTO nums (num) VALUES (?)";
 
     [_db open];
     [_db executeUpdate:sql, [NSString stringWithFormat:@"%ld", num]];
     [_db close];
 }
 
-- (NSString*)selectFromNumsTable
+- (NSString *)selectFromNumsTable
 {
-    NSString* sql = @"SELECT id, num FROM nums;";
-    NSString* nums = @"";
+    NSString *sql = @"SELECT id, num FROM nums;";
+    NSString *nums = @"";
 
     [_db open];
-    FMResultSet* results = [_db executeQuery:sql];
-    while ([results next]) {
+    FMResultSet *results = [_db executeQuery:sql];
+    while ([results next])
+    {
         NSInteger recordId = [results intForColumn:@"id"];
         NSInteger num = [results intForColumn:@"num"];
         nums = [NSString stringWithFormat:@"%@(%ld) %ld\n", nums, recordId, num];

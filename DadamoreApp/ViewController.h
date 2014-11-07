@@ -9,10 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "FmdbDao.h"
 
-
 @interface ViewController : UIViewController
 
 @property FmdbDao *dao;
 
 @end
-

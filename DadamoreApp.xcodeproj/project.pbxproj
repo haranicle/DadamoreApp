@@ -15,6 +15,8 @@
 		F630B0311A0C9C650033ED26 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F630B0301A0C9C650033ED26 /* Images.xcassets */; };
 		F630B0341A0C9C650033ED26 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F630B0321A0C9C650033ED26 /* LaunchScreen.xib */; };
 		F630B0401A0C9C650033ED26 /* DadamoreAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F630B03F1A0C9C650033ED26 /* DadamoreAppTests.m */; };
+		F63B70FD1A0CC66F00A905BD /* Nums.m in Sources */ = {isa = PBXBuildFile; fileRef = F63B70FC1A0CC66F00A905BD /* Nums.m */; };
+		F63FDD7E1A0CC23800FB510F /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F63FDD7C1A0CC23800FB510F /* Model.xcdatamodeld */; };
 		F6AB00AE1A0CAF71009FAFCA /* FmdbDao.m in Sources */ = {isa = PBXBuildFile; fileRef = F6AB00AD1A0CAF71009FAFCA /* FmdbDao.m */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,9 @@
 		F630B0391A0C9C650033ED26 /* DadamoreAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DadamoreAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F630B03E1A0C9C650033ED26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F630B03F1A0C9C650033ED26 /* DadamoreAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DadamoreAppTests.m; sourceTree = "<group>"; };
+		F63B70FB1A0CC66F00A905BD /* Nums.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nums.h; sourceTree = "<group>"; };
+		F63B70FC1A0CC66F00A905BD /* Nums.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Nums.m; sourceTree = "<group>"; };
+		F63FDD7D1A0CC23800FB510F /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		F6AB00AC1A0CAF71009FAFCA /* FmdbDao.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FmdbDao.h; sourceTree = "<group>"; };
 		F6AB00AD1A0CAF71009FAFCA /* FmdbDao.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FmdbDao.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -118,6 +123,9 @@
 				F630B0231A0C9C650033ED26 /* Supporting Files */,
 				F6AB00AC1A0CAF71009FAFCA /* FmdbDao.h */,
 				F6AB00AD1A0CAF71009FAFCA /* FmdbDao.m */,
+				F63FDD7C1A0CC23800FB510F /* Model.xcdatamodeld */,
+				F63B70FB1A0CC66F00A905BD /* Nums.h */,
+				F63B70FC1A0CC66F00A905BD /* Nums.m */,
 			);
 			path = DadamoreApp;
 			sourceTree = "<group>";
@@ -283,8 +291,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F63B70FD1A0CC66F00A905BD /* Nums.m in Sources */,
 				F630B02C1A0C9C650033ED26 /* ViewController.m in Sources */,
 				F6AB00AE1A0CAF71009FAFCA /* FmdbDao.m in Sources */,
+				F63FDD7E1A0CC23800FB510F /* Model.xcdatamodeld in Sources */,
 				F630B0291A0C9C650033ED26 /* AppDelegate.m in Sources */,
 				F630B0261A0C9C650033ED26 /* main.m in Sources */,
 			);
@@ -491,6 +501,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		F63FDD7C1A0CC23800FB510F /* Model.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				F63FDD7D1A0CC23800FB510F /* Model.xcdatamodel */,
+			);
+			currentVersion = F63FDD7D1A0CC23800FB510F /* Model.xcdatamodel */;
+			path = Model.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = F630B0181A0C9C650033ED26 /* Project object */;
 }
