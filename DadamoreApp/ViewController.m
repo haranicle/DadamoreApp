@@ -2,7 +2,7 @@
 //  ViewController.m
 //  DadamoreApp
 //
-//  Created by MTER on 2014/11/07.
+//  Created by haranicle on 2014/11/07.
 //  Copyright (c) 2014年 haranicle. All rights reserved.
 //
 
@@ -19,53 +19,65 @@
 
 static const int ddLogLevel = LOG_LEVEL_VERBOSE;
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    
+
+    self.dao = [FmdbDao new];
+
     [PTEDashboard.sharedDashboard show];
 }
 
-- (void)didReceiveMemoryWarning {
+- (void)didReceiveMemoryWarning
+{
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - UserDefaults
 
-- (IBAction)saveUserDefaults:(id)sender {
+- (IBAction)saveUserDefaults:(id)sender
+{
     DDLogInfo(@"%s", __PRETTY_FUNCTION__);
-    
+
     [[NSUserDefaults standardUserDefaults] setObject:@"Hello Dadamore!!" forKey:@"keykey"];
 }
 
-- (IBAction)loadUserDefaults:(id)sender {
+- (IBAction)loadUserDefaults:(id)sender
+{
     DDLogInfo(@"%s", __PRETTY_FUNCTION__);
-    
+
     NSString* text = [[NSUserDefaults standardUserDefaults] objectForKey:@"keykey"];
     DDLogInfo(text);
 }
 
-
 #pragma mark - FMDB
 
-- (IBAction)saveFmdb:(id)sender {
+- (IBAction)saveFmdb:(id)sender
+{
     DDLogInfo(@"%s", __PRETTY_FUNCTION__);
+
+    [_dao insertRecordToNumsTable:arc4random() % 10000];
 }
 
-- (IBAction)loadFmdb:(id)sender {
+- (IBAction)loadFmdb:(id)sender
+{
     DDLogInfo(@"%s", __PRETTY_FUNCTION__);
+
+    DDLogInfo([_dao selectFromNumsTable]);
 }
 
 #pragma mark - CoreData
 
-- (IBAction)saveCoreData:(id)sender {
+- (IBAction)saveCoreData:(id)sender
+{
     DDLogInfo(@"%s", __PRETTY_FUNCTION__);
 }
 
-- (IBAction)loadCoreData:(id)sender {
+- (IBAction)loadCoreData:(id)sender
+{
     DDLogInfo(@"%s", __PRETTY_FUNCTION__);
 }
-
 
 @end

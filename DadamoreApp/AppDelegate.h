@@ -2,7 +2,7 @@
 //  AppDelegate.h
 //  DadamoreApp
 //
-//  Created by MTER on 2014/11/07.
+//  Created by haranicle on 2014/11/07.
 //  Copyright (c) 2014年 haranicle. All rights reserved.
 //
 
@@ -12,6 +12,4 @@
 
 @property (strong, nonatomic) UIWindow *window;
 
-
 @end
-
